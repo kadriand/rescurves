@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="ExcelWithHelixPrelim.View.Secondary.About"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExcelWithHelixPrelim.View.Secondary"
+             mc:Ignorable="d" >
+    <Grid Background="White">
+        <DockPanel LastChildFill = "True">
+
+
+            <Label DockPanel.Dock = "Top" HorizontalAlignment="Center">
+                <TextBlock Text="ResCurves" FontSize="32" FontWeight="DemiBold">
+                    <TextBlock.TextEffects>
+                        <TextEffect PositionStart="0" PositionCount="3" Foreground="#b6400e"/>
+                        <TextEffect PositionStart="3" PositionCount="6" Foreground="#6d6d6d"/>
+                    </TextBlock.TextEffects>
+                </TextBlock>
+            </Label>
+
+
+            <Grid DockPanel.Dock="Left" >
+                <Image x:Name="BengalCat" Width="70" VerticalAlignment="Top" Margin="0,50,0,0" Source="/ExcelWithHelixPrelim;component/Properties/bengal-cat.png"/>
+                <TextBlock VerticalAlignment="Bottom" FontSize="8">
+                    <Run>Cat image by: </Run><Hyperlink Name="FlatIconLink"  NavigateUri="http://www.flaticon.com/packs/cat-breed-bodies">Freepik</Hyperlink>
+                </TextBlock>
+            </Grid>
+
+
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="300">
+                <Label FontWeight="Bold" HorizontalAlignment="Center">Rescurves 0.0 .2</Label>
+                <Label HorizontalAlignment="Center" Padding="0">by Adrián Rodríguez</Label>
+                <TextBlock Margin="30,20,0,0">
+                    <Run>Chemical Engineering,</Run>
+                    <LineBreak/>
+                    <Run>National University of Colombia</Run>
+                    <LineBreak/>
+                    <Run>Contact email:&#160;</Run><Hyperlink Name="EmailLink" NavigateUri="mailto:test@test.com">karodriguezr@unal.edu.co</Hyperlink>
+                    <LineBreak/>
+                </TextBlock>
+                <Label Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="© Copyright 2017" Margin="0,20,0,0"/>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</UserControl>
