@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ExcelWithHelixPrelim.Configuration;
+using Rescurves.Configuration;
 
-namespace ExcelWithHelixPrelim.View.Secondary
+namespace Rescurves.View.Secondary
 {
     public partial class AddinPreferencesWindow : Form
     {

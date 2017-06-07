@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using ExcelWithHelixPrelim.Controller;
+using Rescurves.Controller;
 using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 
-namespace ExcelWithHelixPrelim
+namespace Rescurves
 {
     public partial class ThisAddIn
     {

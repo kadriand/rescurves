@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace ExcelWithHelixPrelim.Controller
+namespace Rescurves.Controller
 {
     using System.Windows;
     using System.Windows.Media.Media3D;

@@ -1,4 +1,4 @@
-﻿namespace ExcelWithHelixPrelim.View.Secondary
+﻿namespace Rescurves.View.Secondary
 {
     partial class AboutForm
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.about1 = new ExcelWithHelixPrelim.View.Secondary.About();
+            this.about1 = new Rescurves.View.Secondary.About();
             this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 

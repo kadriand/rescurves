@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
-using ExcelWithHelixPrelim.Configuration;
-using ExcelWithHelixPrelim.Model;
+using Rescurves.Configuration;
+using Rescurves.Model;
 using HelixToolkit.Wpf;
 using Microsoft.Office.Interop.Excel;
 
-namespace ExcelWithHelixPrelim.Controller
+namespace Rescurves.Controller
 {
     class RangeParser
     {

@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ExcelWithHelixPrelim.Controller;
-using ExcelWithHelixPrelim.Model;
-using ExcelWithHelixPrelim.View.Secondary;
+using Rescurves.Controller;
+using Rescurves.Model;
+using Rescurves.View.Secondary;
 using Application = Microsoft.Office.Interop.Excel.Application;
 
-namespace ExcelWithHelixPrelim.View
+namespace Rescurves.View
 {
     public partial class MapWindow : Form
     {

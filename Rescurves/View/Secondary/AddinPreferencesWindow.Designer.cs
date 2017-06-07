@@ -1,4 +1,4 @@
-﻿namespace ExcelWithHelixPrelim.View.Secondary
+﻿namespace Rescurves.View.Secondary
 {
     partial class AddinPreferencesWindow
     {

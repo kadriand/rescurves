@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Media.Media3D;
 using HelixToolkit.Wpf;
 
-namespace ExcelWithHelixPrelim.Model
+namespace Rescurves.Model
 {
 
     public class ResidueLine : LinesVisual3D

@@ -1,4 +1,4 @@
-﻿namespace ExcelWithHelixPrelim.View
+﻿namespace Rescurves.View
 {
     partial class MapWindow
     {
@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MapWindow));
             this.MapContainer = new System.Windows.Forms.SplitContainer();
             this.mapViewer = new System.Windows.Forms.Integration.ElementHost();
-            this.mapViewerControl = new ExcelWithHelixPrelim.View.MapPlotControl();
+            this.mapViewerControl = new Rescurves.View.MapPlotControl();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newCurveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

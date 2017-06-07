@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExcelWithHelixPrelim.Properties {
+namespace Rescurves.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

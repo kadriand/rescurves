@@ -6,11 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
-using ExcelWithHelixPrelim.View;
+using Rescurves.View;
 using HelixToolkit.Wpf;
 using Microsoft.Office.Tools.Ribbon;
 
-namespace ExcelWithHelixPrelim.Model
+namespace Rescurves.Model
 {
 
     public class ResidueMap

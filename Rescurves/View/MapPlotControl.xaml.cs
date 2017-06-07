@@ -15,13 +15,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Media3D;
-using ExcelWithHelixPrelim.Controller;
-using ExcelWithHelixPrelim.Model;
+using Rescurves.Controller;
+using Rescurves.Model;
 using HelixToolkit.Wpf;
 using Microsoft.Office.Core;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace ExcelWithHelixPrelim.View
+namespace Rescurves.View
 {
     /// <summary>
     /// Interaction logic for MapPlotControl.xaml

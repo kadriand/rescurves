@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="ExcelWithHelixPrelim.View.Secondary.About"
+﻿<UserControl x:Class="Rescurves.View.Secondary.About"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ExcelWithHelixPrelim.View.Secondary"
+             xmlns:local="clr-namespace:Rescurves.View.Secondary"
              mc:Ignorable="d" >
     <Grid Background="White">
         <DockPanel LastChildFill = "True">
@@ -20,7 +20,7 @@
 
 
             <Grid DockPanel.Dock="Left" >
-                <Image x:Name="BengalCat" Width="70" VerticalAlignment="Top" Margin="0,50,0,0" Source="/ExcelWithHelixPrelim;component/Properties/bengal-cat.png"/>
+                <Image x:Name="BengalCat" Width="70" VerticalAlignment="Top" Margin="0,50,0,0" Source="/Rescurves;component/Properties/bengal-cat.png"/>
                 <TextBlock VerticalAlignment="Bottom" FontSize="8">
                     <Run>Cat image by: </Run><Hyperlink Name="FlatIconLink"  NavigateUri="http://www.flaticon.com/packs/cat-breed-bodies">Freepik</Hyperlink>
                 </TextBlock>
@@ -28,7 +28,7 @@
 
 
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Width="300">
-                <Label FontWeight="Bold" HorizontalAlignment="Center">Rescurves 0.0 .2</Label>
+                <Label FontWeight="Bold" HorizontalAlignment="Center">Rescurves 0.0.2</Label>
                 <Label HorizontalAlignment="Center" Padding="0">by Adrián Rodríguez</Label>
                 <TextBlock Margin="30,20,0,0">
                     <Run>Chemical Engineering,</Run>

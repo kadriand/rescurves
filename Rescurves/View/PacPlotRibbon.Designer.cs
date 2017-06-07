@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExcelWithHelixPrelim.View
+namespace Rescurves.View
 {
     partial class PacPlotRibbon : Microsoft.Office.Tools.Ribbon.RibbonBase
     {
@@ -68,7 +68,7 @@ namespace ExcelWithHelixPrelim.View
             // launcherButton
             // 
             this.launcherButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.launcherButton.Image = global::ExcelWithHelixPrelim.Properties.Resources.squares;
+            this.launcherButton.Image = global::Rescurves.Properties.Resources.squares;
             this.launcherButton.Label = "Draw map";
             this.launcherButton.Name = "launcherButton";
             this.launcherButton.ShowImage = true;

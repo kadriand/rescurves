@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media.Media3D;
-using ExcelWithHelixPrelim.Model;
+using Rescurves.Model;
 using System.Collections.ObjectModel;
 using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
-using ExcelWithHelixPrelim.View;
+using Rescurves.View;
 using HelixToolkit.Wpf;
 using Microsoft.Office.Interop.Excel;
 using Application = Microsoft.Office.Interop.Excel.Application;
 
-namespace ExcelWithHelixPrelim.Controller
+namespace Rescurves.Controller
 {
     public class MapManager
     {

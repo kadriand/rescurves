@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ExcelWithHelixPrelim.View.Secondary
+namespace Rescurves.View.Secondary
 {
     /// <summary>
     /// Interaction logic for About.xaml

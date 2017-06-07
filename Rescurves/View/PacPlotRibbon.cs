@@ -7,9 +7,9 @@ using Microsoft.Office.Tools.Ribbon;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms.VisualStyles;
-using ExcelWithHelixPrelim.Model;
+using Rescurves.Model;
 
-namespace ExcelWithHelixPrelim.View
+namespace Rescurves.View
 {
     public partial class PacPlotRibbon
     {

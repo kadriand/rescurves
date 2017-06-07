@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExcelWithHelixPrelim.View.Secondary
+namespace Rescurves.View.Secondary
 {
     public partial class AboutForm : Form
     {

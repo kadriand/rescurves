@@ -8,9 +8,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Media3D;
 using System.Windows.Shapes;
-using ExcelWithHelixPrelim.Controller;
+using Rescurves.Controller;
 
-namespace ExcelWithHelixPrelim.Model
+namespace Rescurves.Model
 {
     public class MapBounds
     {
