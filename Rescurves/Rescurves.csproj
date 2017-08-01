@@ -32,9 +32,9 @@
     <IsWebBootstrapper>True</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>D:\VisualStudio\rescurves\dist\</PublishUrl>
-    <InstallUrl>https://raw.githubusercontent.com/kadriand/rescurves/master/dist/</InstallUrl>
+    <InstallUrl>https://raw.githubusercontent.com/kadriand/rescurves/master/Rescurves/dist/</InstallUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>0.0.2.2</ApplicationVersion>
+    <ApplicationVersion>0.0.2.1</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
