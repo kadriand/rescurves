@@ -3,6 +3,10 @@
 # Rescurves
 Rescurves is an open source MS Excel Add-in for plotting residue curves maps for quaternary systems. It is based on [Helix Toolkit]
 
+### Toolbar icon
+![N|Solid](https://raw.githubusercontent.com/kadriand/rescurves/master/dist/toolbar.png)
+
+### Diagrams
 ![N|Solid](https://raw.githubusercontent.com/kadriand/rescurves/master/dist/capture.png)
 
 # Features
