@@ -13,7 +13,7 @@ Rescurves is an open source MS Excel Add-in for plotting residue curves maps for
 # Installation
 
 Rescurves requires .NET 4.5+ to run.
-Download the installer file [dist/Rescurves.exe](https://raw.githubusercontent.com/kadriand/rescurves/master/Rescurves/dist/Rescurves.exe) or the compressed file [dist/Rescurves.zip](https://raw.githubusercontent.com/kadriand/rescurves/master/dist/Rescurves.zip) and once totally unziped open the file Rescurves.vsto
+Download the installer file [dist/Rescurves.exe](https://raw.githubusercontent.com/kadriand/rescurves/master/dist/Rescurves.exe) or the compressed file [dist/Rescurves.zip](https://raw.githubusercontent.com/kadriand/rescurves/master/dist/Rescurves.zip) and once totally unziped open the file Rescurves.vsto
 If any problem is presented during the installation, try running the bat file [DeleteVSTOConfig.bat](https://raw.githubusercontent.com/kadriand/rescurves/master/dist/DeleteVSTOConfig.bat)
 
 ### Development
