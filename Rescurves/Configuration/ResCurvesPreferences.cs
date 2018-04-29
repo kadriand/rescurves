@@ -10,5 +10,8 @@ namespace Rescurves.Configuration
     {
         public static int CellsBetweenColumns = 1;
         public static int ComponentsCount = 4;
+        public static bool TemperatureColumn = true;
+        public static bool DisplayPoints = false;
+        public static bool DisplayPointLabels = false;
     }
 }

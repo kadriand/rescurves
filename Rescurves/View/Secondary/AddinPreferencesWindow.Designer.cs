@@ -60,7 +60,7 @@
             // 
             // columnCellsTB
             // 
-            this.columnCellsTB.Location = new System.Drawing.Point(231, 36);
+            this.columnCellsTB.Location = new System.Drawing.Point(230, 42);
             this.columnCellsTB.Name = "columnCellsTB";
             this.columnCellsTB.Size = new System.Drawing.Size(47, 20);
             this.columnCellsTB.TabIndex = 1;
@@ -70,9 +70,10 @@
             this.columnCellsLabel.AutoSize = true;
             this.columnCellsLabel.Location = new System.Drawing.Point(6, 36);
             this.columnCellsLabel.Name = "columnCellsLabel";
-            this.columnCellsLabel.Size = new System.Drawing.Size(174, 13);
+            this.columnCellsLabel.Size = new System.Drawing.Size(218, 26);
             this.columnCellsLabel.TabIndex = 0;
-            this.columnCellsLabel.Text = "Number of columns between composition columns";
+            this.columnCellsLabel.Text = "Number of columns between \r\ncomposition columns (excluding temperature)";
+            this.columnCellsLabel.Click += new System.EventHandler(this.columnCellsLabel_Click);
             // 
             // AddinPreferencesWindow
             // 

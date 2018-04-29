@@ -13,13 +13,12 @@ namespace Rescurves.Model
 
     public class CompositionPoint
     {
-        public double Xa = 0;
-        public double Xb = 0;
-        public double Xc = 0;
-        public double Xd = 0;
-        public Point3D point3D { get; set; }
-        //public double Temperature = 0;
-
+        public double Xa;
+        public double Xb;
+        public double Xc;
+        public double Xd;
+        public double Temperature = double.NaN;
+        public Point3D Point3D { get; set; }
 
         // TODO UNUSED METHOD
         public CompositionPoint(double xa, double xb, double xc, double xd, Point3D point3D)
@@ -28,7 +27,7 @@ namespace Rescurves.Model
             this.Xb = xb;
             this.Xc = xc;
             this.Xd = xd;
-            this.point3D = point3D;
+            this.Point3D = point3D;
         }
 
         public CompositionPoint(double xa, double xb, double xc, double xd)
@@ -42,7 +41,7 @@ namespace Rescurves.Model
             double yy = 0.5 * Math.Sqrt(3) * xc + (1.0 / 6.0) * Math.Sqrt(3) * xd;
             double zz = Math.Sqrt(2.0 / 3.0) * xd;
 
-            this.point3D = new Point3D(xx, yy, zz);
+            this.Point3D = new Point3D(xx, yy, zz);
         }
 
         public override string ToString()
@@ -56,6 +55,9 @@ namespace Rescurves.Model
                 point3D.Append(", " + (Xc < 0.01 ? Xc.ToString("e2").Replace("e-00", "e-").Replace("e+000", "") : Xc.ToString("F2", CultureInfo.InvariantCulture)));
                 point3D.Append(", " + (Xd < 0.01 ? Xd.ToString("e2").Replace("e-00", "e-").Replace("e+000", "") : Xd.ToString("F2", CultureInfo.InvariantCulture)));
                 point3D.Append("]");
+                if (!double.IsNaN(Temperature))
+                    point3D.Append(" T=" + Temperature.ToString("F2", CultureInfo.InvariantCulture));
+
                 return point3D.ToString();
             }
             catch (Exception e)

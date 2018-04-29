@@ -72,7 +72,7 @@ namespace Rescurves.Model
                         comPoints[compBindex] = 1 - (j + 1.0) / 10;
 
                         CompositionPoint compositionPoint = new CompositionPoint(comPoints[0], comPoints[1], comPoints[2], comPoints[3]);
-                        yield return compositionPoint.point3D;
+                        yield return compositionPoint.Point3D;
                     }
                     compAindex++;
                     compBindex++;

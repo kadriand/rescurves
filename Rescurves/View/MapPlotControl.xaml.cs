@@ -38,10 +38,29 @@ namespace Rescurves.View
             this.DataContext = this;
             CompositionTarget.Rendering += this.CompositionTargetRendering;
         }
-        
-        public void AddResidueLine(LinesVisual3D residueLine)
+
+        public void AddResidueLine(ResidueLine residueLine)
         {
             MapView3D.Children.Add(residueLine);
+        }
+
+        public void AddResidueLineArrowHeads(ResidueLine residueLine)
+        {
+            foreach (TruncatedConeVisual3D temperatureArrow in residueLine.TemperatureArrowHeads)
+                if (!MapView3D.Children.Contains(temperatureArrow))
+                    MapView3D.Children.Add(temperatureArrow);
+                else
+                    temperatureArrow.Visible = true;
+        }
+
+        public void RemoveResidueLineArrowHeads(ResidueLine residueLine)
+        {
+            foreach (TruncatedConeVisual3D temperatureArrow in residueLine.TemperatureArrowHeads)
+                if (MapView3D.Children.Contains(temperatureArrow))
+                {
+                    temperatureArrow.Visible = true;
+                    MapView3D.Children.Remove(temperatureArrow);
+                }
         }
 
         public void DefineComponentLabels(IList<BillboardTextItem> componentsTextItems)

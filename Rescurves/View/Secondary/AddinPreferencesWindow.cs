@@ -27,5 +27,10 @@ namespace Rescurves.View.Secondary
                 ResCurvesPreferences.CellsBetweenColumns = parsed;
             this.Dispose();
         }
+
+        private void columnCellsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

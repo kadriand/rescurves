@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Rescurves.Configuration;
 using Rescurves.Controller;
 using Rescurves.Model;
 using Rescurves.View.Secondary;
@@ -20,15 +21,23 @@ namespace Rescurves.View
 
         public MapWindow()
         {
-            InitializeComponent();
+            Initialize();
             MapViewer = mapViewerControl;
         }
 
         public MapWindow(MapPlotControl mapViewer)
         {
-            InitializeComponent();
+            Initialize();
             mapViewerControl = mapViewer;
             MapViewer = mapViewerControl;
+        }
+
+        private void Initialize()
+        {
+            InitializeComponent();
+            dataPointsToolStripMenuItem.Checked = ResCurvesPreferences.DisplayPoints;
+            pointLabelsToolStripMenuItem.Checked = ResCurvesPreferences.DisplayPointLabels;
+            temperatureArrowsToolStripMenuItem.Checked = ResCurvesPreferences.TemperatureColumn;
         }
 
         private void newCurveBtn_Click(object sender, EventArgs e)
@@ -58,7 +67,7 @@ namespace Rescurves.View
 
         }
 
-        private void dataPointsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DataPointsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MapManager mapManager = Globals.ThisAddIn.MapManager;
             if (dataPointsToolStripMenuItem.Checked)
@@ -67,9 +76,10 @@ namespace Rescurves.View
                 mapManager.DisplayPoints(this);
 
             dataPointsToolStripMenuItem.Checked = !dataPointsToolStripMenuItem.Checked;
+            ResCurvesPreferences.DisplayPoints = dataPointsToolStripMenuItem.Checked;
         }
 
-        private void pointLabelsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PointLabelsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MapManager mapManager = Globals.ThisAddIn.MapManager;
             if (pointLabelsToolStripMenuItem.Checked)
@@ -78,9 +88,10 @@ namespace Rescurves.View
                 mapManager.DisplayPointLabels(this);
 
             pointLabelsToolStripMenuItem.Checked = !pointLabelsToolStripMenuItem.Checked;
+            ResCurvesPreferences.DisplayPointLabels = pointLabelsToolStripMenuItem.Checked;
         }
 
-        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void PreferencesToolStripMenuItem(object sender, EventArgs e)
         {
             AddinPreferencesWindow addinPreferencesWindow = new AddinPreferencesWindow();
             addinPreferencesWindow.Show();
@@ -90,6 +101,18 @@ namespace Rescurves.View
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
+        }
+
+        private void TemperatureArrowsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MapManager mapManager = Globals.ThisAddIn.MapManager;
+            if (temperatureArrowsToolStripMenuItem.Checked)
+                mapManager.HideTemperatureArrows(this);
+            else
+                mapManager.DisplayTemperatureArrows(this);
+
+            temperatureArrowsToolStripMenuItem.Checked = !temperatureArrowsToolStripMenuItem.Checked;
+            ResCurvesPreferences.DisplayPoints = temperatureArrowsToolStripMenuItem.Checked;
         }
     }
 }

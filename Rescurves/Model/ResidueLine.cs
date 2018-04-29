@@ -14,14 +14,8 @@ namespace Rescurves.Model
     public class ResidueLine : LinesVisual3D
     {
         public string SourceGroup { get; set; }
-
-
-        public Collection<CompositionPoint> CompositionPoints { get; set; }
-
-        public ResidueLine()
-        {
-            this.CompositionPoints = new Collection<CompositionPoint>();
-        }
+        public Collection<CompositionPoint> CompositionPoints = new Collection<CompositionPoint>();
+        public Collection<TruncatedConeVisual3D> TemperatureArrowHeads = new Collection<TruncatedConeVisual3D>();
 
         public Collection<CompositionPoint> RepresentativePoints()
         {

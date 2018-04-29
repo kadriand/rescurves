@@ -45,6 +45,7 @@
             this.editComponentLabelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.coordinatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temperatureArrowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pointLabelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borderRuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -164,6 +165,7 @@
             this.editComponentLabelsToolStripMenuItem,
             this.toolStripSeparator2,
             this.coordinatesToolStripMenuItem,
+            this.temperatureArrowsToolStripMenuItem,
             this.dataPointsToolStripMenuItem,
             this.pointLabelsToolStripMenuItem,
             this.borderRuleToolStripMenuItem});
@@ -195,19 +197,26 @@
             this.coordinatesToolStripMenuItem.Text = "Coordinate system";
             this.coordinatesToolStripMenuItem.Click += new System.EventHandler(this.coordinatesToolStripMenuItem_Click);
             // 
+            // temperatureArrowsToolStripMenuItem
+            // 
+            this.temperatureArrowsToolStripMenuItem.Name = "temperatureArrowsToolStripMenuItem";
+            this.temperatureArrowsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.temperatureArrowsToolStripMenuItem.Text = "Temperature arrows";
+            this.temperatureArrowsToolStripMenuItem.Click += new System.EventHandler(this.TemperatureArrowsToolStripMenuItem_Click);
+            // 
             // dataPointsToolStripMenuItem
             // 
             this.dataPointsToolStripMenuItem.Name = "dataPointsToolStripMenuItem";
             this.dataPointsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.dataPointsToolStripMenuItem.Text = "Data points";
-            this.dataPointsToolStripMenuItem.Click += new System.EventHandler(this.dataPointsToolStripMenuItem_Click);
+            this.dataPointsToolStripMenuItem.Click += new System.EventHandler(this.DataPointsToolStripMenuItem_Click);
             // 
             // pointLabelsToolStripMenuItem
             // 
             this.pointLabelsToolStripMenuItem.Name = "pointLabelsToolStripMenuItem";
             this.pointLabelsToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.pointLabelsToolStripMenuItem.Text = "Point labels";
-            this.pointLabelsToolStripMenuItem.Click += new System.EventHandler(this.pointLabelsToolStripMenuItem_Click);
+            this.pointLabelsToolStripMenuItem.Click += new System.EventHandler(this.PointLabelsToolStripMenuItem_Click);
             // 
             // borderRuleToolStripMenuItem
             // 
@@ -231,7 +240,7 @@
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
             this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.preferencesToolStripMenuItem.Text = "Preferences";
-            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.preferencesToolStripMenuItem_Click);
+            this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.PreferencesToolStripMenuItem);
             // 
             // toolStripSeparator3
             // 
@@ -356,5 +365,6 @@
         private System.Windows.Forms.ToolStripMenuItem pointLabelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem temperatureArrowsToolStripMenuItem;
     }
 }

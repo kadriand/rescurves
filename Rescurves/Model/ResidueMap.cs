@@ -15,20 +15,15 @@ namespace Rescurves.Model
 
     public class ResidueMap
     {
-
         public MapWindow MapWindow { get; set; }
         public RibbonDropDownItem DropDownItem { get; set; }
 
-        public Collection<ResidueLine> ResidueLines { get; set; }
-        public Collection<string> Sources { get; set; }
-        public List<BillboardTextItem> ComponentLabels { get; set; }
+        public Collection<ResidueLine> ResidueLines = new Collection<ResidueLine>();
+        public Collection<string> Sources = new Collection<string>();
+        public List<BillboardTextItem> ComponentLabels = new List<BillboardTextItem>();
 
         public ResidueMap()
         {
-            this.ResidueLines = new Collection<ResidueLine>();
-            this.ComponentLabels = new List<BillboardTextItem>();
-            this.Sources = new Collection<string>();
-
             this.MapWindow = new MapWindow();
             this.MapWindow.MapViewer.DrawBorders(new MapBounds());
         }
@@ -99,6 +94,7 @@ namespace Rescurves.Model
 
         public void RemoveResidueLine(ResidueLine residueLine)
         {
+            //TODO is all that has to be removed?
             this.MapWindow.MapViewer.RemoveResidueLine(residueLine);
             this.ResidueLines.Remove(residueLine);
         }

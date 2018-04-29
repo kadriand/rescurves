@@ -92,6 +92,7 @@ namespace Rescurves.Controller
 
             int firstLineColumn = 1;
             int lastLineColumn = ResCurvesPreferences.ComponentsCount;
+
             while (lastLineColumn <= columnsCount)
             {
                 Range residueRange = null;
@@ -123,20 +124,20 @@ namespace Rescurves.Controller
                 Point3D pt;
                 try
                 {
-                    Range xaRange = (Range)row.Cells[1, 1];
-                    Range xbRange = (Range)row.Cells[1, 2];
-                    Range xcRange = (Range)row.Cells[1, 3];
-                    Range xdRange = (Range)row.Cells[1, 4];
+                    string xaRange = ((Range)row.Cells[1, 1]).Value.ToString();
+                    string xbRange = ((Range)row.Cells[1, 2]).Value.ToString();
+                    string xcRange = ((Range)row.Cells[1, 3]).Value.ToString();
+                    string xdRange = ((Range)row.Cells[1, 4]).Value.ToString();
 
                     double xa = 0;
                     double xb = 0;
                     double xc = 0;
                     double xd = 0;
 
-                    if (!Double.TryParse(xaRange.Value.ToString(), out xa) ||
-                        !Double.TryParse(xbRange.Value.ToString(), out xb) ||
-                        !Double.TryParse(xcRange.Value.ToString(), out xc) ||
-                        !Double.TryParse(xdRange.Value.ToString(), out xd))
+                    if (!Double.TryParse(xaRange, out xa) ||
+                        !Double.TryParse(xbRange, out xb) ||
+                        !Double.TryParse(xcRange, out xc) ||
+                        !Double.TryParse(xdRange, out xd))
                     {
                         lastPoint = null;
                         continue;
@@ -147,7 +148,16 @@ namespace Rescurves.Controller
 
                     CompositionPoint compositionPoint = new CompositionPoint(xa, xb, xc, xd);
                     residueLine.CompositionPoints.Add(compositionPoint);
-                    pt = compositionPoint.point3D;
+                    pt = compositionPoint.Point3D;
+
+                    if (ResCurvesPreferences.TemperatureColumn && row.Columns.Count > ResCurvesPreferences.ComponentsCount)
+                    {
+                        string tempRange = ((Range)row.Cells[1, 5]).Value.ToString();
+                        double temperature;
+                        if (Double.TryParse(tempRange, out temperature))
+                            compositionPoint.Temperature = temperature;
+                    }
+
                 }
                 catch (Exception e)
                 {
