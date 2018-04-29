@@ -248,6 +248,9 @@ namespace Rescurves.Controller
 
         private void MakeTemperatureArrows(ResidueLine residueLine)
         {
+            if (residueLine.CompositionPoints.Count == 0)
+                return;
+
             CompositionPoint previousArrowedPoint = residueLine.CompositionPoints[0];
             CompositionPoint previousDirectionPoint = residueLine.CompositionPoints[0];
 
@@ -276,10 +279,10 @@ namespace Rescurves.Controller
                 {
                     Origin = vector3DOrigin,
                     Normal = vector3DNormal,
-                    Height = 0.01,
-                    BaseRadius = 0.002,
+                    Height = 0.015,
+                    BaseRadius = 0.003,
                     TopRadius = 0,
-                    Material = Materials.Red
+                    Fill = System.Windows.Media.Brushes.Tomato
                 };
 
                 residueLine.TemperatureArrowHeads.Add(tempArrow);

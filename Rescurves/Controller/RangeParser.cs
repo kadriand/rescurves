@@ -93,12 +93,13 @@ namespace Rescurves.Controller
             int firstLineColumn = 1;
             int lastLineColumn = ResCurvesPreferences.ComponentsCount;
 
+
             while (lastLineColumn <= columnsCount)
             {
                 Range residueRange = null;
                 try
                 {
-                    residueRange = _xlApp.Range[(Range)selectedRange.Columns[firstLineColumn], (Range)selectedRange.Columns[lastLineColumn]];
+                    residueRange = _xlApp.Range[(Range)selectedRange.Columns[firstLineColumn], (Range)selectedRange.Columns[lastLineColumn + (ResCurvesPreferences.TemperatureColumn ? 1 : 0)]];
                     residueRange.Interior.ColorIndex = 36;
                 }
                 catch (Exception e)
@@ -150,18 +151,18 @@ namespace Rescurves.Controller
                     residueLine.CompositionPoints.Add(compositionPoint);
                     pt = compositionPoint.Point3D;
 
-                    if (ResCurvesPreferences.TemperatureColumn && row.Columns.Count > ResCurvesPreferences.ComponentsCount)
+                    if (ResCurvesPreferences.TemperatureColumn)
                     {
-                        string tempRange = ((Range)row.Cells[1, 5]).Value.ToString();
-                        double temperature;
-                        if (Double.TryParse(tempRange, out temperature))
+                        Range rowCell = (Range)row.Cells[1, 5];
+                        double temperature = double.NaN;
+                        if (rowCell.Value != null && Double.TryParse(rowCell.Value.ToString(), out temperature))
                             compositionPoint.Temperature = temperature;
                     }
 
                 }
                 catch (Exception e)
                 {
-                    Debug.WriteLine(e.StackTrace);
+                    Debug.WriteLine(e.Message);
                     continue;
                 }
 

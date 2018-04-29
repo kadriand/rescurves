@@ -56,7 +56,7 @@ namespace Rescurves.Model
                 point3D.Append(", " + (Xd < 0.01 ? Xd.ToString("e2").Replace("e-00", "e-").Replace("e+000", "") : Xd.ToString("F2", CultureInfo.InvariantCulture)));
                 point3D.Append("]");
                 if (!double.IsNaN(Temperature))
-                    point3D.Append(" T=" + Temperature.ToString("F2", CultureInfo.InvariantCulture));
+                    point3D.Append("\nT=" + Temperature.ToString("F2", CultureInfo.InvariantCulture));
 
                 return point3D.ToString();
             }
