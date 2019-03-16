@@ -22,7 +22,7 @@ If any problem is presented during the installation, try running the bat file [D
 
 # Usage
 
-Pretty simple: once installed the complement, open a file with quaternary data (the file [/test/DatosMatlab-Da1.xlsx](https://raw.githubusercontent.com/kadriand/rescurves/master/test/DatosMatlab-Da1.xlsx) is a good starting point) and select the list of points you wan to plot, then click the button 'Draw map' from the Add-in Ribbon and finally
+Pretty simple: once installed the complement, open a file with quaternary data (the file [/test/DatosMatlab-Da1.xlsx](https://raw.githubusercontent.com/kadriand/rescurves/master/test/DatosMatlab-Da1.xlsx) is a good starting point) and select the list of points you want to plot, then click the button 'Draw map' from the Add-in Ribbon and that's all. You don't need to pay licenses or create complex Matlab/Python scripts to plot your maps.
 
 ### Development
 
